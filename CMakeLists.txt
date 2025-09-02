@@ -9,5 +9,7 @@ add_executable(Fractus__ src/main.cpp
         include/complex.h
 )
 
+find_package(imgui CONFIG REQUIRED)
+target_link_libraries(Fractus__ PRIVATE imgui::imgui)
 find_package(SDL3 CONFIG REQUIRED)
 target_link_libraries(Fractus__ PRIVATE SDL3::SDL3)
